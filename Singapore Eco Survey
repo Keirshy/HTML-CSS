@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Singapore Eco Survey</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+body{
+  background-image: linear-gradient(#00F5AA, #0575BB);
+}
+
+.container-intro{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  padding: 24px 50px 24px 50px;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background: rgba(245,255,255,0.45);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+h1 {
+  font-family: open sans;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+
+p{
+  font-family: open sans;
+  font-weight: regular;
+  font-size: 1.2rem;
+  color: black;
+  line-height: 180%;
+}
+
+.survey-form{
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  margin-bottom: 200px;
+  padding: 24px 50px 24px 50px;
+  background: rgba(245,255,255,0.45);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.form-item, .radio-group label, .check-group label{
+  font-family: open sans;
+  font-weight: regular;
+  font-size: 1.1rem;
+  color: black;
+  line-height: 140%;
+  width: 500px;
+}
+
+.select-group {
+  font-family: open sans;
+  font-weight: regular;
+  font-size: 1.1rem;
+  color: black;
+  line-height: 140%;
+  width: 510px;
+}
+
+.form-group, .select-group, .radio-group, .check-group { 
+  margin-bottom: 2rem; 
+}
+
+.submit {
+  font-family: open sans;
+  font-weight: regular;
+  font-size: 1.1rem;
+  color: black;
+  line-height: 140%;
+  width: 120px;
+}
+
+input {
+  margin-bottom: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro" class="container-intro">
+  <h1 id="title"> Singapore Eco Survey </h1>
+  <p id="description">
+    As a member of the planet Earth, we all have a responsibility to create a world for our own and our children's future.
+    <br><br>How are we Earthlings doing so far? Fill out the survey to help us find out. After we have reached 10,000 responses, we will collate all the data into a public report.
+    <br><br>Your response is crucial to our quality of life here on Earth. Thank you for your time!
+  </p>
+</div>
+
+<form id="survey-form">
+  <div class="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">
+        <p>Name</p>
+      </label>
+      <input type="text" name="name" id="name" class="form-item" placeholder="Enter your name" required />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">
+        <p>Email</p>
+      </label>
+      <input type="email" name="email" id="email" class="form-item" placeholder="Enter your email" required />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="age">
+        <p>Age</p>
+      </label>
+      <input type="number" name="age" id="age" class="form-item" placeholder="Enter your age" min="1" max="150" required />
+    </div>
+    <div class="select-group">
+      <label id="area-label" for="area">
+        <p>Area of Residence</p>
+      </label>
+      <select name="area" id="area" class="form-item" required>
+        <option disabled selected value>Select current area</option>
+        <option value="North">North</option>
+        <option value="South">South</option>
+        <option value="East">East</option>
+        <option value="West">West</option>
+        <option value="Central">Central</option>
+      </select>
+    </div>
+
+    <br>
+    <div class="radio-group">
+      <p>How often do you recycle, if ever?</p>
+      <input type="radio" name="recycling" id="never" value="never">
+      <label for="never">Never</label>
+      <br>
+
+      <input type="radio" name="recycling" id="rarely" value="rarely">
+      <label for="rarely">Rarely</label>
+      <br>
+
+      <input type="radio" name="recycling" id="sometimes" value="sometimes">
+      <label for="sometimes">Sometimes</label>
+      <br>
+
+      <input type="radio" name="recycling" id="usually" value="usually">
+      <label for="usually">Usually</label>
+      <br>
+
+      <input type="radio" name="recycling" id="always" value="always">
+      <label for="always">Always</label>
+      <br>
+    </div>
+    
+    <br>
+    <div class="check-group">
+      <p>Pop Quiz: Which of the following can be recycled in the blue bins in Singapore? Hint: you can find the <a href="https://www.nea.gov.sg/docs/default-source/our-services/waste-management/list-of-items-that-are-recyclable-and-not.pdf" target="_blank"  #toolbar=0>list of recyclables here</a>.</p>
+      <input type="checkbox" name="quiz" id="bottles" value="correct">
+      <label for="bottles">Clean Plastic Bottles</label>
+      <br>
+
+      <input type="checkbox" name="quiz" id="metal" value="correct">
+      <label for="metal">Clean Metal Utensils</label>
+      <br>
+
+      <input type="checkbox" name="quiz" id="lightbulbs" value="incorrect">
+      <label for="lightbulbs">Lightbulbs</label>
+      <br>
+
+      <input type="checkbox" name="quiz" id="aerosols" value="correct">
+      <label for="aerosols">Aerosol Containers (e.g. hairspray)</label>
+      <br>
+      <input type="checkbox" name="quiz" id="paper-bags" value="correct">
+      <label for="paper-bags">Paper Bags</label>
+      <br>
+      <input type="checkbox" name="quiz" id="masks" value="incorrect">
+      <label for="masks">Disposable Masks</label>
+      <br>
+      
+      <input type="checkbox" name="quiz" id="takeaway" value="incorrect">
+      <label for="takeaway">Takeaway Containers (e.g. styrofoam box, oily plastic boxes)</label>
+      <br>
+    </div>
+    
+    <div class="form-group">
+      <p>Do you have any other comments or questions?</p>
+      <textarea name="comments" style="width:500px; height:200px;" placeholder="Enter any comments" class="form-item"></textarea> 
+  </div>
+    <input type="submit" value="Submit" class="submit">
+</form>
+  
+  </body>
+</html>
+
+
+
+
