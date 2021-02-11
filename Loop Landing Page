@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+  --blue: #1575A9;
+  --white: #FFFFFF;
+  --light-blue: #D8F1FF;
+  --text: #383B3D;
+  --light-grey: #FDFDFD;
+  --medium-grey: #F2F2F2;
+  --green: #0EA789;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+.wrapper {
+  position: relative;
+}
+
+body{
+  background-color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1{
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 180%;
+  color: var(--text);
+}
+
+h2{
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 180%;
+  color: var(--text);
+}
+
+h3{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 180%;
+  color: var(--green);
+}
+
+h4{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: var(--text);
+}
+
+p{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  color: var(--text);
+}
+
+/* HEADER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: grid;
+  grid-template-columns: 60px minmax(120px, 1fr) 150px;
+  grid-template-areas: header-img nav-bar signup-login;
+  grid-gap: 0px 10px;
+  min-height: 64px;
+  align-items: center;
+  background-color: var(--light-grey);
+  padding: 0px 32px;
+  z-index: 9999;
+}
+
+img {
+  height: 32px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 1rem;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+#signup-login {
+  justify-self: end;
+}
+
+.login {
+  border: none;
+  padding: 6px 12px;
+  color: var(--blue);
+}
+
+.signup {
+  border-color: #1575A9;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: var(--blue);
+  background-color: var(--light-blue);
+}
+
+/* MAIN
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.content {
+  top: 50px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+#brands, #news, #subscribe, #function {
+  margin-top: 80px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+/* HERO BANNER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#hero {
+  display: grid;
+  align-items: center;
+  text-align: left;
+  justify-items: space-around;
+  grid-template-columns: minmax(500px, 1fr) 1fr;
+  padding: 0px 32px;
+  grid-gap: 0px 40px;
+}
+
+#decorative-blob {
+  position: absolute;
+  height: 250px;
+  left: 20px;
+  top: 150px;
+}
+
+#hero-text {
+  display: grid;
+  grid-template-rows: 116px 120px 60px;
+  grid-gap: 8px 0px;
+  justify-self: end;
+
+}
+
+#hero-signup {
+  width: 80px;
+  height: 32px;
+
+}
+
+#hero-left {
+  display: grid;
+  grid-template-rows: 190px 58px;
+  grid-gap: 32px 0px;
+  justify-self: end;
+}
+
+#hero-subtitle {
+  max-width: 458px;
+  height: 58px;
+}
+
+#hero-img {
+  height: 582px;
+  justify-self: start;
+}
+
+/* HOW LOOP WORKS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#function-img {
+  min-height: 120px;
+  grid-column: 1/5;
+}
+
+#function-content {
+  display: grid;
+  grid-template-columns: repeat(4, 188px);
+  grid-column-gap: 111px;
+  margin: 8px 32px;
+  padding: 24px;
+  justify-content: center;
+  align-items: space-around;
+}
+
+/* TOP BRANDS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#brands-content {
+  display: flex;
+  background-color: var(--medium-grey);
+  gap: 56px;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+#pantene, #oralb, #bodyshop, #tide, #unilever, #HD, #crest, #clorox {
+  width: 72px;
+  height: 72px;
+}
+
+/* FEATURED IN
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#news-content {
+  display: flex;
+  background-color: var(--medium-grey);
+  gap: 56px;
+  margin-top: 28px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+#guardian, #cnn, #forbes, #FC{
+  height: 24px;
+}
+
+#HP, #BBC, #ecobahn {
+  height: 16px;
+}
+
+/* SUBSCRIBE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#subscribe {
+  background: #7F7FD5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(285deg, #B4D2FF 0%, #D1EFFF 55.21%, #E0FFF0 100%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(285deg, #B4D2FF 0%, #D1EFFF 55.21%, #E0FFF0 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 32px 0px;
+}
+
+#subscribe-text {
+  display: grid;
+  grid-template-rows: 64px 60px;
+  align-items: center;
+  justify-items: center;
+}
+
+#subscribe-subtitle {
+  width: 400px;
+}
+
+
+#form {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+#form-content {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+
+
+#subscribe-email {
+  border-color: #999999;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+#subscribe-submit {
+  border-color: #1575A9;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: var(--white);
+  background-color: var(--blue);
+  width: 100px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+    
+<!-- NAV BAR
+---------------------------------------------------->
+  <div id="header">
+    <div id="header-img">
+      <img src="https://www.zerowasteman.com/wp-content/uploads/2019/05/Loop-Logo.png" alt="Loop Logo">
+    </div>
+
+    <div id="nav-bar">
+      <ul>
+        <li><a href="#loop" class="nav-link">How Loop Works</a></li> 
+        <li><a href="#brands" class="nav-link">Brands</a></li> 
+        <li><a href="#subscribe" class="nav-link">Subscribe</a></li> 
+      </ul>
+    </div>
+
+    <div id="signup-login">
+      <button type="button" id="nav-login" class="login">Log In</button>
+      <button type="button" id="nav-signup" class="signup">Sign Up</button>
+    </div>
+  </div>
+
+<!-- MAIN CONTENT
+---------------------------------------------------->
+  <main class="content">
+    
+<!-- HERO BANNER
+---------------------------------------------------->
+    <div id="hero" class="hero">
+       <!--<img src="https://live.staticflickr.com/65535/50890192747_6a0558760a_o.png" alt="blue decorative blob" id="decorative-blob">-->
+      <div id="hero-left">
+        <div id="hero-text">
+          <h1 id="hero-header">Just Imagine a World <br><font color="#1575A9"> Without Single-Use Packaging</font></h1>
+          <h4 id="hero-subtitle">Loop is a zero-waste, packaging replacement service that delivers your daily neccessities to your doorstep.</h4>          
+        </div>
+        <button type="button" id="hero-signup" class="signup">Sign Up</button> 
+      </div>
+
+      <div id="hero-right">
+        <img id="hero-img" src="https://live.staticflickr.com/65535/50889262003_8a42a08729_o.png" alt="Loop Hero Image">
+      </div>
+    </div>    
+
+    
+<!-- HOW LOOP WORKS
+---------------------------------------------------->
+    <div id="function">
+      <h2 id="loop">How Loop Works</h2>
+        <div id="function-content">
+          <img src="https://live.staticflickr.com/65535/50889380978_fd1c617820_o.png" id="function-img" alt="How Loop Works">
+          <div id="step-1">
+            <h2><font color="#0EA789">1</font></h2>
+            <h3>Order in the Loop Store</h3>
+            <p>Order household products from 100+ brands</p>
+          </div>
+          
+          <div id="step-2">
+            <h2><font color="#0EA789">2</font></h2>
+            <h3>Order is Delivered to You</h3>
+            <p>Loop sends them in tote bags that protect your items and the environment</p>
+          </div>
+              
+          <div id="step-3">
+            <h2><font color="#0EA789">3</font></h2>
+            <h3>Empty Containers are Picked Up for Free</h3>
+            <p>Schedule a free pickup and Loop takes care of the rest</p>
+          </div>
+              
+          <div id="step-4">
+            <h2><font color="#0EA789">4</font></h2>
+            <h3>Containers are Cleaned and Reused</h3>
+            <p>Loop cleans containers up to standards help by the FDA for regular packaged items</p>
+          </div>
+    </div>
+
+<!-- TOP BRANDS IN STORE
+---------------------------------------------------->
+    <div id="brands">
+      <h2 id="brands-header">Top Brands in the Loop Store</h2>
+      <div id="brands-content">
+        <img src="https://live.staticflickr.com/65535/50890214997_80fa4ea4dc_o.png" alt="Pantene Logo" id="pantene">
+        <img src="https://live.staticflickr.com/65535/50890095361_4ed42fe1be_o.png" alt="Oral B Logo" id="oralb">
+        <img src="https://live.staticflickr.com/65535/50890214972_889c93b5f3_o.png" alt="Body Shop Logo" id="bodyshop">
+        <img src="https://live.staticflickr.com/65535/50890214937_415ff25416_o.png" alt="Tide Logo" id="tide">
+        <img src="https://live.staticflickr.com/65535/50889386408_79516f2f57_o.png" alt="Unilever Logo" id="unilever">
+        <img src="https://live.staticflickr.com/65535/50890095371_6a98e4ee4c_o.png" alt="Haagen Dazs Logo" id="HD">
+        <img src="https://live.staticflickr.com/65535/50890095461_d749dd6b1b_o.png" alt="Crest Logo" id="crest">
+        <img src="https://live.staticflickr.com/65535/50889386708_5ef1d0927d_o.png" alt="Clorox Logo" id="clorox">
+      </div>
+    </div>
+
+      
+<!-- AS FEATURED IN
+---------------------------------------------------->
+    <div id="news">
+      <h2 id="news-header">As Featured In</h2>
+      <iframe width="704" height="396" src="https://www.youtube.com/embed/ylU9sPZIPZc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      <div id="news-content">        
+        <img src="https://live.staticflickr.com/65535/50890095541_f24057b8ed_o.png" alt="CNN Logo" id="cnn">
+        <img src="https://live.staticflickr.com/65535/50890215072_2efafe1a77_o.png" alt="Huffington Post Logo" id="HP">
+        <img src="https://live.staticflickr.com/65535/50890215097_3a5d427287_o.png" alt="Forbes Logo" id="forbes">
+        <img src="https://live.staticflickr.com/65535/50889386573_91ce6a0b27_o.png" alt="Fast Company Logo" id="FC">
+        <img src="https://live.staticflickr.com/65535/50889386748_eb54104890_o.png" alt="BBC Logo" id="BBC">
+        <img src="https://live.staticflickr.com/65535/50890095596_64f25c56ff_o.png" alt="The Guardian Logo" id="gaurdian">
+        <img src="https://live.staticflickr.com/65535/50889386453_25e00d4e0d_o.png" alt="EcoBahn Logo" id="ecobahn">
+      </div>
+    </div>
+     
+<!-- SUBSCRIBE
+---------------------------------------------------->      
+    <div id="subscribe">
+      <div id="subscribe-text">
+        <h2 id="subscribe-header">Subscribe to Our Newsletter</h2>
+        <h4 id="subscribe-subtitle">Subscribe to the newslatter to keep updated on our new partnerships and locations!</h4>
+      </div>
+      <div id="form" action="https://www.freecodecamp.com/email-submit" target="_blank">
+        <div id="form-content">
+          <input type="email" id="subscribe-email" placeholder="Enter your email here">
+          <br>
+          <input type="submit" id="subscribe-submit" value="submit">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+  </div>  
+</body>
+</html>
